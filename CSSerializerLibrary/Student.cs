@@ -8,7 +8,7 @@ using GuidLibrary;
 namespace CSSerializerLibrary
 {
     //[GUID()]
-    class Student
+    public class Student
     {
         public int id { get; set; }
         public string GUID { get; set; }
