@@ -15,10 +15,11 @@ namespace CSSerializerLibrary
     {
         public static void SerializeClasses(Type anyType, string PATH)
         {
-            GUID _guid = new GUID();
+            string _guidValue = "";
             try
             {
-                _guid = (GUID)anyType.GetCustomAttributes(typeof(GUID), true).First();
+                GUID _guid = (GUID)anyType.GetCustomAttributes(typeof(GUID), true).First();
+                _guidValue = _guid.getGuid();
             }
             catch (Exception _exception)
             {
@@ -29,7 +30,7 @@ namespace CSSerializerLibrary
             Ac4yClass _ac4yClass1 = new Ac4yClass(anyType.Name);
             _ac4yClass1.Namespace = anyType.Namespace;
             _ac4yClass1.Ancestor = anyType.BaseType.Name;
-            _ac4yClass1.GUID = _guid.getGuid();
+            _ac4yClass1.GUID = _guidValue;
             foreach (var _prop in _propInf)
             {
                 _ac4yClass1.PropertyList.Add(new Ac4yProperty(_prop.Name, _prop.PropertyType.Name));
