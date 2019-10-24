@@ -8,7 +8,7 @@ namespace CSSerializerLibrary
 {
     public class Program
     {
-        //2019. 10. 24. 15:47
+        //2019. 10. 24. 15:55
 
         public const string PATH = "d:\\Server\\Visual_studio\\";
 
