@@ -13,7 +13,7 @@ namespace CSSerializerLibrary
 {
     public class Generate
     {
-        public static void SerializeClasses(Type anyType, string PATH)
+        public void SerializeClasses(Type anyType, string PATH)
         {
             string _guidValue = "";
             try
