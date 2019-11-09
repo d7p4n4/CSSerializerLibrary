@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CSNeedToSerializeAttributeLib;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,7 +9,7 @@ namespace CSSerializerLibrary
 {
     public class Serialize
     {
-        //2019. 10. 24. 15:55
+        //2019. 11. 09. 18:20
 
         public void SerializeMethod(string path, Type _anyType)
         {
@@ -19,7 +20,12 @@ namespace CSSerializerLibrary
 
             foreach (var type in allTypes)
             {
-                _generate.SerializeClasses(type, path);
+                Object[] serializeAttribute = type.GetCustomAttributes(typeof(NeedToSerialize), true);
+
+                if (serializeAttribute.Length > 0)
+                {
+                    _generate.SerializeClasses(type, path);
+                }
             }
         }
     }

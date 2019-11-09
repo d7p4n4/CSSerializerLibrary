@@ -35,6 +35,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Library\c#\CSAc4yMetaClassLibrary.dll</HintPath>
     </Reference>
+    <Reference Include="CSNeedToSerializeAttributeLib">
+      <HintPath>C:\Library\c#\CSNeedToSerializeAttributeLib.dll</HintPath>
+    </Reference>
     <Reference Include="GuidLibrary, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Library\c#\GuidLibrary.dll</HintPath>
