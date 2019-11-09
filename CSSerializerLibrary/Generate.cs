@@ -13,6 +13,7 @@ namespace CSSerializerLibrary
 {
     public class Generate
     {
+        //Date: 2019. 11. 09. 15:40
         public void SerializeClasses(Type anyType, string PATH)
         {
             string _guidValue = "";
@@ -25,7 +26,7 @@ namespace CSSerializerLibrary
             {
 
             }
-            PropertyInfo[] _propInf = anyType.GetProperties();
+            PropertyInfo[] _propInf = anyType.GetProperties(BindingFlags.DeclaredOnly | BindingFlags.Public | BindingFlags.Instance);
 
             Ac4yClass _ac4yClass1 = new Ac4yClass(anyType.Name);
             _ac4yClass1.Namespace = anyType.Namespace;
